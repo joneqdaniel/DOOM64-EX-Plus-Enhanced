@@ -527,7 +527,7 @@ static void R_DrawClouds(void) {
     dglSetVertex(v);
 
     I_ShaderUnBind();
-    GL_Set2DQuad(v, 0, 0, SCREENWIDTH, SCREENHEIGHT, 0, 0, 0, 0, 0);
+    GL_Set2DQuad(v, 0, 0, SCREENWIDTH, 120, 0, 0, 0, 0, 0);
     dglSetVertexColor(&v[0], PostProcessSkyColor(sky->skycolor[1], true), 4);
     dglSetVertexColor(&v[2], PostProcessSkyColor(sky->skycolor[0], false), 2); // bottom
     dglDisable(GL_TEXTURE_2D);
@@ -543,7 +543,7 @@ static void R_DrawClouds(void) {
     dglSetVertexColor(&v[0], sky->skycolor[2], 4);
 
     I_ShaderUnBind();
-    GL_Set2DQuad(v, 0, 0, SCREENWIDTH, SCREENHEIGHT, 0, 0, 0, 0, 0);
+    GL_Set2DQuad(v, 0, 0, SCREENWIDTH, 120, 0, 0, 0, 0, 0);
     dglSetVertexColor(&v[0], PostProcessSkyColor(sky->skycolor[1], true), 4);
     dglSetVertexColor(&v[2], PostProcessSkyColor(sky->skycolor[0], false), 2);
 
