@@ -1312,15 +1312,15 @@ void A_SpiderFireLaser(mobj_t* actor)
 
 		// ---- RANDOM ANGLE (style Unseen Evil) ----
 		fireangle = actor->angle;
-		fireangle += (((int32_t)P_SubRandom(pr_cposattack)) << 19);
+		fireangle += (((int32_t)P_SubRandom(pr_spiderfirelaser)) << 19);
 
 		// ---- AIM ----
 		slope = P_AimLineAttack(actor, fireangle, 0, LASERRANGE);
 
 		// ---- DISPERSION VERTICALE style UE ----
-		slope += (((int32_t)P_SubRandom(pr_spidattack)) << 5); 
+		slope += (((int32_t)P_SubRandom(pr_spiderfirelaser)) << 5);
 
-		damage = ((P_Random(pr_spidattack) % 5) + 1) * 3;
+		damage = ((P_Random(pr_spiderfirelaser) % 5) + 1) * 3;
 
 		P_LineAttack(actor, fireangle, LASERRANGE, slope, damage);
 
